@@ -1,0 +1,117 @@
+// Миксины и плейсхолдеры
+
+
+// внутренняя тень для блока
+@mixin boxShadowInset($param,$parami){
+	-webkit-box-shadow: $param, inset $parami;
+	   -moz-box-shadow: $param, inset $parami;
+	        box-shadow: $param, inset $parami;
+}
+
+// отразить по горизонтали
+@mixin flipH(){
+	   -moz-transform: scaleX(-1);
+	     -o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
+	    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+// отразить по вертикали
+@mixin flipV(){
+	   -moz-transform: scaleY(-1);
+	     -o-transform: scaleY(-1);
+	-webkit-transform: scaleY(-1);
+	        transform: scaleY(-1);
+	    filter: FlipV;
+	-ms-filter: "FlipV";
+}
+// Переход
+@mixin transition($element:all, $duration:0.5s, $effect:ease-out, $start:0){
+     -webkit-transition: $element $duration $effect $start;
+     	-moz-transition: $element $duration $effect $start;
+     	  -o-transition: $element $duration $effect $start;
+             transition: $element $duration $effect $start;
+}
+// Наложение спрайта
+@mixin sprite($x:0px,$y:0px,$color:transparent){
+	background: $color url("../i/sprite.png") $x $y no-repeat;
+}
+
+// Матрица преобразований
+@mixin matrix($a: 1, $c:0, $b:0, $d:1, $tx:0, $ty:0)
+{
+    -webkit-transform: matrix($a, $c, $b, $d, $tx, $ty);
+       -moz-transform: matrix($a, $c, $b, $d, $tx, $ty);
+        -ms-transform: matrix($a, $c, $b, $d, $tx, $ty);
+         -o-transform: matrix($a, $c, $b, $d, $tx, $ty);
+}
+
+
+@mixin alignCenter(){
+	position: absolute;
+	top: 0;bottom: 0;left: 0;right: 0; margin: auto;
+}
+
+//Вписка изображения во враппер фиксированных значений
+@mixin imgWrapper($width, $height){
+	width: $width; 
+	height: $height;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	.inner{
+		width:$width*2;
+		height: $height*2;
+		position: absolute;
+		left: 50%;
+		margin-left: -$width;
+		top: 50%;
+		margin-top: -$height;
+		img{max-width: 75%;max-height: 75%;
+			min-height: $height; min-width: $width;
+			@include alignCenter();
+			width: auto; height: auto;
+		}
+	}
+}
+
+@mixin rotate($degs)
+{
+    -webkit-transform: rotate($degs);
+       -moz-transform: rotate($degs);
+        -ms-transform: rotate($degs);
+         -o-transform: rotate($degs);
+            transform: rotate($degs);
+}
+
+
+//******************//
+//   Плэйсхолдеры   //
+//******************//
+
+//Ширина шапки, контента, футера, menu
+%pageWidth {
+  width:100%;min-width:$contentWidth + 60px;
+  &>.inner{
+  	width:$contentWidth;margin: 0 auto;
+  }
+}
+
+@mixin setWidth($width){
+	$contentWidth:$width;
+
+	#header,
+	#footer,
+	#menu,
+	.catSubMenu,
+	#pageHTML,
+	#containerMain,
+	#mainSlider .fotorama__html>div
+	{
+	    width:100%;min-width:$contentWidth + 0px;
+		  &>.inner{
+		  	width:$contentWidth;margin: 0 auto;
+		  }
+	}
+}

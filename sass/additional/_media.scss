@@ -1,0 +1,529 @@
+// media
+
+@media screen and (max-width: 1290px){
+
+	@include setWidth(940px);
+	
+	.catalogCarusel .cWrapper{
+		padding: 0;
+		.row{
+			margin-right: 50px;
+		}
+	}
+	#mainSlider{
+		.fotorama,
+		.fotorama__stage {
+			min-height: 460px;
+			.text{
+				width: 65% !important;
+			}
+			img{
+				width: 32% !important;
+				left: 68% !important;
+			}
+		}
+	}
+		
+
+	main.withRSideBar{
+		width: 624px;
+	}
+	.rSidebar{
+		width: 316px;
+	}
+	.lSidebar{
+		width: 275px;
+	}
+	.lSidebar + main{
+		margin-left: 316px;
+	}
+	#header{
+		.logo{
+			img{
+				width: 425px;
+			}
+		}
+	}
+
+	.timeTable,
+	.hAddress{
+		width: 150px;
+	}
+
+	.hide1280{
+		display: none;
+	}
+	.pb1280{
+		display: block;
+	}
+	#containerHeader > div{
+		margin-top: 0;
+	}
+	#menu{
+		li{
+			a{
+				padding: 0 10px;
+			}
+		}
+	}
+	.siteSearch{
+		width: 207px;
+		padding-left: 0;
+		&:after{
+			left: 13px;
+		}
+	}
+	.getCat{
+		&.width1680{
+			display: none;
+		}
+		&.width1024{
+			display: block;
+		}
+		.orange{
+			font-size: 14px;
+			padding: 0 8px;
+		}
+		input[type="text"] {
+			padding-right: 130px;
+		}
+	}
+	#footer{
+		.col{
+			width: 216px;
+			padding-right: 0;
+			&:nth-child(1){
+				width: 290px;
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	.doclinks{
+		float: right;
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 960px){
+
+	.lSidebar{
+		display: none;
+	}
+	@include setWidth(636px);
+	.catalogMItem{
+	    &:hover{
+	        .catSubMenu{
+	            display: none;
+	        }
+	    }
+	}
+	.fotorama,
+	.fotorama__stage {
+		min-height: 390px;
+		.text{
+			width: 65% !important;
+		}
+		.title{
+			font-size: 36px !important;
+		}
+		img{
+			width: 32% !important;
+			left: 68% !important;
+		}
+	}
+
+	.catalogCarusel .cWrapper{
+		padding:  0 30px;
+		.row{
+			&:nth-child(3n){
+				img{
+					height: 80%;
+				}
+			}
+			&:nth-child(2n){
+				img{
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	a.back{
+		display: none;
+
+	}
+	main.withRSideBar{
+		margin-right: 0;
+		padding: 0;
+	}
+	.rSidebar{
+		width: 100%;
+		margin-top: 30px;
+		.sidebarBlock{
+			float: left;
+			width: 44%;
+		}
+		.row-1-1{
+			width: 100%;
+			padding: 0;
+		}
+		.opros{
+			margin-right: 16px;
+		}
+	}
+
+	.lSidebar{
+		width: 100%;
+		margin-bottom: 30px;
+		padding: 0;
+		float: none;
+	}
+	.lSidebar + main{
+		margin-left: 0;
+		padding: 0;
+	}
+	#header{
+		height: 55px;
+		&>.inner{
+			height: 55px;
+		}
+		.logo{
+			img{
+				width: 235px;
+			}
+		}
+		.hPhone{
+			display: none;
+		}
+	}
+
+	.timeTable,
+	.hAddress{
+		display: none !important;
+	}
+
+	.hide1280{
+		display: none;
+	}
+	.pb1280{
+		display: block;
+	}
+	#containerHeader > div{
+		margin-top: 0;
+	}
+	#containerMain{
+		padding-bottom: 590px;
+	}
+	#pageHTML{
+		overflow: hidden;
+		&:after{
+			display: block;
+			content:"";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background:rgba(#000, 0.6);
+			z-index: 10;
+			display: none;
+			bottom: 0;
+			left: 0;
+		}
+		&.openMenu{
+			&:after{
+				display: block;
+			}
+			#menu{
+				right: 0;
+			}
+			#menuButton{
+				right: 290px;
+				z-index: 20;
+			}
+		}
+	}
+	#menu{
+		z-index: 20;
+		position: absolute;
+		width: 280px !important;
+		background:#fff;
+		height: 100%;
+		right: -300px;
+		top: 0;
+		min-width: 0;
+		float: none;
+		&.innerMenu {
+			background:#fff;
+		}
+		&>.inner{
+			width: 100%;
+		}
+		li{
+			display: block;
+			border-top: #acb5be solid 1px;
+			float: none;
+			&.minusLeft{
+				margin-left: 0;
+			}
+			a{
+				padding: 0 30px;
+				background:#98a2ab;
+			}
+		}
+		.adMenu{
+			display: block;
+			padding: 30px;
+			.button{
+				width:100%;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			.lang{
+				line-height: 28px;
+			}
+		}
+
+
+	}
+	.linkToBack{
+		display: block;
+	}
+	#breadCrambs{
+		display: none;
+	}
+	#mainSlider{
+		margin-top: 5px;
+	}
+	.siteSearch{
+		width: 100%;
+		@include box-sizing(border-box);
+		padding: 30px;
+		float: none;
+		height: 90px;
+		background:#98a2ab;
+		&:after{
+			left: 42px;
+			top: 30px;
+		}
+		form{width: 240px;}
+		input[type="text"]{
+		}
+	}
+	.getCat{
+		.blockTitle {
+			width: 100%;
+		}
+	}
+
+	#menuButton{
+		display: block;
+	}
+	.carusel .plitka [class*="row-"] {
+		width: 318px;
+	}
+	#footer{
+		height: 480px;
+		padding-top: 30px;
+		.inner{
+			height: 480px;
+		}
+		.fCounter{
+			position: absolute;
+			top: 30px;
+			right: 0;
+		}
+		.col{
+			min-height: 250px;
+			margin-bottom: 20px;
+			width: 216px;
+			padding-right: 0;
+			width: 212px;
+
+			&:nth-child(2){
+				padding-left: 0;
+			}
+			&:nth-child(1){
+				width: 100%;
+				min-height: 0;
+				.fLogo{
+					display: none;
+				}
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	
+}
+
+@media screen and (max-width: 660px){
+
+	#mainSlider .fotorama, #mainSlider .fotorama__stage{
+		min-height: 200px;
+	}
+
+	//---------------------------------------------------------Table
+
+	table.adaptive{
+		margin-bottom: 40px;
+		max-width: 93%;
+			thead, tbody, th, td, tr { 
+				display: block; 
+			}
+		 
+			thead tr { 
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+				
+			}
+		 
+			td { 
+				border: none;
+				border-bottom: 1px solid #eee; 
+				position: relative;
+				padding-left: 50% !important; 
+				height: auto !important;
+				padding: 15px 0;
+				width: 50% !important;
+				&:last-child{
+					border-bottom: 2px solid #d4d4d4;
+				}
+			}
+		 
+			td:before { 
+				position: absolute;
+				/* Отступы сверху и слева */
+				top: 15px;
+				left: 6px;
+				width: 45%; 
+				padding-right: 10px; 
+				white-space: nowrap;
+				font-weight: 700;
+				color:$darkText;
+			}
+		
+	 
+		&.vistTable{
+			td:nth-of-type(1):before { content: "Время проведения"; }
+			td:nth-of-type(2):before { content: "Город"; }
+			td:nth-of-type(3):before { content: "Название"; }
+		}
+		&.analogTable{
+			td:nth-of-type(1):before { content: "Тип прибора"; }
+			td:nth-of-type(2):before { content: "Еденица прибора"; }
+			td:nth-of-type(3):before { content: "Описание"; }
+		}
+	}
+
+	@include setWidth(320px);
+
+	#menu{
+		min-width: 0;
+	}
+	.navig{
+		display: none;
+	}
+	.btTabs{
+		overflow: visible;
+		height: auto;
+		padding: 0 10px;
+	}
+	.bt{
+		display: block;
+		float: none;
+		width: 100%;
+		@include box-sizing(border-box);
+		font-size: 16px;
+		padding: 0 15px;
+		.carOnM &{
+			display: inline-block;
+			width: auto;
+		}
+	}
+	.fotorama,
+	.fotorama__stage {
+		min-height: 200px;
+		.text{
+			width: 50% !important;
+		}
+		.title{
+			font-size: 24px !important;
+		}
+		p{
+			display: none;
+		}
+		img{
+			width: 40% !important;
+			left: 66% !important;
+			top: 4% !important;
+		}
+		.fotorama__arr{
+			display: none !important;
+		}
+	}
+
+	.rSidebar{
+		width: 280px;
+		float: none;
+		.sidebarBlock{
+			float: none;
+			width: 100%;
+			.inner{
+				height: auto;
+			}
+		}
+		.opros{
+			margin-right: 0;
+		}
+	}
+	.withRSideBar {
+		width: 310px !important;
+		float: none;
+	}
+	.minus8{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	[class*='rows-']{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.rSidebar{
+		padding: 0 8px;
+		clear: both;
+		width: 295px;
+	}
+	#containerMain{
+		padding-bottom: 850px;
+	}
+	#footer{
+		height: 750px;
+		.col{
+			&:nth-child(2),
+			&:nth-child(3){
+				width: 160px;
+			}
+			&:nth-child(3){
+				padding-left: 10px;
+			}
+			&:nth-child(4){
+				padding: 0;
+				width: 100%;
+			}
+		}
+		.fCounter{
+			display: none;
+		}
+
+	}
+	.doclinks{
+		float: none !important;
+		padding: 0;
+		margin-top: 16px;
+	}
+}
+

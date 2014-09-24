@@ -1,0 +1,499 @@
+/*-------------------------------------------- header ------------------------------------------*/
+#header
+{
+    position: relative;
+    z-index: 2;
+
+    height: 130px;
+    padding-top: 26px;
+
+    @extend %pageWidth;
+}
+#containerHeader
+{
+    height: 130px;
+    & > div
+    {
+        margin-top: 10px;
+        &:first-child
+        {
+            margin-top: 0;
+        }
+    }
+}
+#menu
+{
+    z-index: 1;
+
+    background: rgba(#000, .2);
+
+    @extend %pageWidth;
+    li
+    {
+        display: inline-block;
+        float: left;
+        &.minusLeft
+        {
+            margin-left: -17px;
+        }
+        &:hover,
+        &.active
+        {
+            background: rgba(#000, .2);
+        }
+        &>a
+        {
+            font-weight: 700;
+            line-height: 58px;
+
+            display: block;
+
+            height: 58px;
+            padding: 0 17px;
+
+            text-transform: uppercase;
+
+            color: #fff;
+        }
+    }
+    .nav
+    {
+        &:after
+        {
+            display: block;
+            clear: both;
+
+            content: '';
+        }
+    }
+
+    &.innerMenu{
+        background:#7b8d97;
+        li{
+            &:hover,
+            &.active{
+                background:#67757c;
+            }
+        }
+    }
+}
+.catalogMItem{
+    &:hover{
+        .catSubMenu{
+            display: block;
+        }
+    }
+}
+.catSubMenu{
+     @extend %pageWidth;
+     background:#fff;
+     position: absolute;
+     left:0;
+     padding:0;
+     display: none;
+     height: 413px;
+     overflow: hidden;
+    background-color: #f3f3f5;
+    @include box-shadow(0 18px 20px rgba(37,50,57,.3));
+    @include background-image(linear-gradient(bottom, #e9ebef 0%, #fbfdfd 99.56%, #fbfdfd 100%));
+
+     .inner{
+        font-size: 0;
+     }
+     .row{
+        width: 150px;
+        display: inline-block;
+        float: left;
+        padding: 30px 0 35px !important;
+        text-align: center;
+        line-height: 18px;
+        font-size: 14px;
+        border-bottom: 1px solid #bfcacf;
+        &:hover{
+            color:$orange;
+            text-decoration: underline;
+        }
+        .pic{
+            height: 95px;
+            margin-bottom: 10px;
+        }
+
+        img{
+            max-height: 90px;
+        }
+        span{
+            display: block;
+            width: 135px;
+            margin: 0 auto;
+        }
+     }
+}
+.hPhone
+{
+    text-align: right;
+    .numbers
+    {
+        font-size: 18px;
+        font-weight: 700;
+
+        margin-bottom: 15px;
+
+        color: #000;
+    }
+}
+.siteSearch
+{
+    position: relative;
+
+    float: right;
+
+    height: 34px;
+    padding: 12px;
+
+    @include border-radius(2px);
+    form
+    {
+        border: 1px solid #fff;
+        position: relative;
+    }
+    &:after
+    {
+        font-family: 'FontAwesome';
+        line-height: 34px;
+
+        position: absolute;
+        top: 13px;
+        bottom: 0;
+        left: 22px;
+
+        margin: auto 0;
+
+        content: '\f002';
+
+        color: #fff;
+    }
+    input
+    {
+        background: none;
+    }
+    input[type='submit']{
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include opacity(0);
+    }
+    input[type='text']
+    {
+        font-family: 'Ubuntu', sans-serif;
+
+        height: 34px;
+        padding: 0 15px 0 38px;
+
+        text-transform: uppercase;
+        font-size: 14px;
+
+        color: #fff;
+        &::-webkit-input-placeholder
+        {
+            color: #fff;
+        }
+        &::-moz-placeholder
+        {
+            color: #fff;
+        }/* Firefox 19+ */
+        &:-moz-placeholder
+        {
+            color: #fff;
+        }/* Firefox 18- */
+        &:-ms-input-placeholder
+        {
+            color: #fff;
+        }
+        @include box-shadow(none);
+    }
+}
+
+#breadCrambs {
+    font-size: 12px;
+    margin-bottom: 35px;
+    a{
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+        &:first-of-type{
+            margin-left: 0;
+        }
+    }
+    a, span{
+        display: inline-block;
+        margin: 0 10px;
+
+    }
+}
+
+
+/*-------------------------------------------- footer ------------------------------------------*/
+#footer
+{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+
+    height: $fHeight;
+    padding: 50px 0 30px;
+
+    color: #fff;
+    border-top: 2px solid #fff;
+
+    @extend %pageWidth;
+    @include box-shadow(inset 0 0 100px rgba(0,1,2,.26));
+    @include background-image(linear-gradient(bottom, #e0561d 0%, #ea802c 100%));
+    &:after
+    {
+        position: absolute;
+        top: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        content: '';
+
+        background: transparent url('../i/footerPat.png') left top;
+    }
+}
+#containerFooter
+{
+    font-size: 0;
+
+    z-index: 1;
+
+    height: $fHeight;
+    .col
+    {
+        font-size: 14px;
+
+        display: inline-block;
+
+        width: 25%;
+        min-height: 100%;
+        padding-right: 16px;
+        padding-left: 30px;
+
+        vertical-align: top;
+
+        @include box-sizing(border-box);
+        &:first-child
+        {
+            padding-left: 0;
+            font-size: 12px;
+        }
+        ul
+        {
+            padding: 0;
+        }
+        li
+        {
+            margin-bottom: 6px;
+            a
+            {
+                &:hover
+                {
+                    @include opacity(.7);
+                }
+            }
+        }
+        .title
+        {
+            font-weight: 700;
+
+            display: block;
+
+            margin-bottom: 10px;
+
+            text-transform: uppercase;
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
+        .toBottom
+        {
+            position: absolute;
+            bottom: 0;
+            &.vidokCop
+            {
+                font-size: 12px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+// --------------------------------------------- containerMain
+
+#containerMain
+{
+    padding-top: 55px;
+    padding-bottom: 420px;
+    &.innerPage{
+        padding-top: 20px;
+    }
+}
+
+.containerMain
+{
+    &:after
+    {
+        display: block;
+        clear: both;
+
+        content: '';
+    }
+}
+
+#pageHTML
+{
+    position: relative;
+
+    height: 100%;
+    height: auto!important;
+    min-height: 100%;
+    // background:#f4f5f6;
+    @extend %pageWidth;
+}
+main
+{
+    position: relative;
+    z-index: 0;
+    &.withRSideBar{
+        width: 940px;
+    	@include box-sizing(border-box);
+    	padding-right: 8px;
+        float: left;
+
+    }
+}
+
+
+#containerMain
+{
+    @extend %pageWidth;
+    z-index: 0;
+
+}
+.width1024 {
+    display: none;
+}
+#buttonToBuy{
+    width: 37px;
+    height: 174px;
+    @include sprite(-54px, 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+    z-index: 10;
+    padding: 0 12px;
+    @include box-sizing(border-box);
+   
+    text-align: center;
+    color: #913500;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1;
+    @include text-shadow(0 1px 0 rgba(255,255,255,.6));
+    &:hover{
+        top: 2px;
+    }
+    span{
+        position: absolute;
+        max-width: 100%;
+        display: table;
+        bottom: 0;
+        top: 17px;
+        margin: auto 0;
+         word-wrap: break-word;
+    }
+}
+//------------------------------------------------sidebars
+
+.rSidebar,
+.lSidebar{
+     width: 25%;
+     @include box-sizing(border-box);
+}
+.rSidebar
+{
+    float: right;
+}
+
+.lSidebar{
+    float: left;
+    padding-right: 8px;
+    width: 275px;
+    nav{
+        border-top: 3px solid #bfcacf;
+        &>ul{
+            &>li{
+                border-bottom: 1px solid #bfcacf;
+            }
+            ul{
+                padding-left: 30px;
+                li{
+                    position: relative;
+                    &:before{
+                        position: absolute;
+                        content:"\f054";
+                        top: 15px;
+                        left: -18px;
+                        font-family: "FontAwesome";
+                        @include transition(all, 0.2s);
+                    }
+                    &.active{
+                       &:before{
+                            @include rotate(90deg);
+                            color:$orange;
+                            @include transition(all, 0.2s);
+                       }
+                    }
+                } 
+            }
+        }
+        li{
+            padding: 14px 0;
+        }
+    }
+    li{
+        &>a, &>span{
+            cursor: pointer;
+            &:hover{
+                color:$orange;
+            }
+        }
+    }
+    li{
+        &.active, &.selected{
+            &>a, &>span{
+                color:$orange;
+            }
+            &:before{
+                color:$orange;
+            }
+        }
+    }
+    
+}
+
+.lSidebar + main{
+    margin-left: 25%;
+    padding-left: 8px;
+    margin-top: -12px;
+
+}
