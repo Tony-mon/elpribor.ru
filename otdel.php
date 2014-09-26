@@ -19,6 +19,7 @@
 					data-nav="thumbs"
 					data-thumbwidth="120"
 					data-thumbheight="105"
+					data-arrows="false"
 					data-fit="cover"
 					data-transition="crossfade"
 					>

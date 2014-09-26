@@ -92,7 +92,7 @@
 
 //Ширина шапки, контента, футера, menu
 %pageWidth {
-  width:100%;min-width:$contentWidth + 60px; @include box-sizing(border-box);
+  width:100%;min-width:$contentWidth + 60px;
   &>.inner{
   	width:$contentWidth;margin: 0 auto;
   }

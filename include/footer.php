@@ -56,8 +56,8 @@
 						<li><a href="">Руководства по эксплуатации, програмное обеспечение</a></li>
 						<li><a href="">Сертификаты</a></li>
 						<li><a href="">Видеоинструкции</a></li>
-						<li class="ttu "><a href="">Цены</a></li>
-						<li class="ttu sec"><a href="">Производство</a></li>
+						<li class="ttu"><a href="">Цены</a></li>
+						<li class="ttu"><a href="">Производство</a></li>
 					</ul>
 					<a href="" class="toBottom vidokCop">Создание сайта Чебоксары</a>
 				</div>

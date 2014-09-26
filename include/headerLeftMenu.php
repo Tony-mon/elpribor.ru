@@ -171,5 +171,5 @@
 			</nav>
 		</aside>
 		<main role="main">
-			<span class="linkToBack"><i class="fa fa-chevron-left"></i></span>
+			<a href="" class="linkToBack"><i class="fa fa-chevron-left"></i></a>
 			<h1 class="blockTitle pageTitle">Заголовок страницы</h1>

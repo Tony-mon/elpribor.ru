@@ -120,8 +120,8 @@
 	        }
 	    }
 	}
-	#mainSlider .fotorama,
-	#mainSlider .fotorama__stage {
+	.fotorama,
+	.fotorama__stage {
 		min-height: 390px;
 		.text{
 			width: 65% !important;
@@ -135,7 +135,6 @@
 		}
 	}
 
-	
 	.catalogCarusel .cWrapper{
 		padding:  0 30px;
 		.row{
@@ -187,9 +186,9 @@
 		padding: 0;
 	}
 	#header{
-		height: 80px;
+		height: 55px;
 		&>.inner{
-			height: auto;
+			height: 55px;
 		}
 		.logo{
 			img{
@@ -216,7 +215,7 @@
 		margin-top: 0;
 	}
 	#containerMain{
-		padding-bottom: 480px;
+		padding-bottom: 590px;
 	}
 	#pageHTML{
 		overflow: hidden;
@@ -255,12 +254,11 @@
 		top: 0;
 		min-width: 0;
 		float: none;
-		padding: 0;
 		&.innerMenu {
 			background:#fff;
 		}
 		&>.inner{
-			width: 280px !important;
+			width: 100%;
 		}
 		li{
 			display: block;
@@ -362,7 +360,7 @@
 }
 
 @media screen and (max-width: 660px){
-	
+
 	#mainSlider .fotorama, #mainSlider .fotorama__stage{
 		min-height: 200px;
 	}
@@ -420,10 +418,9 @@
 			td:nth-of-type(3):before { content: "Описание"; }
 		}
 	}
+
 	@include setWidth(320px);
-	#pageHTML{
-		padding: 0;
-	}
+
 	#menu{
 		min-width: 0;
 	}
@@ -445,17 +442,10 @@
 		.carOnM &{
 			display: inline-block;
 			width: auto;
-			height: 34px;
-			line-height: 34px;
-			text-decoration: underline;
-			font-weight: 700;
-			&.active{
-				text-decoration: none;
-			}
 		}
 	}
-	#mainSlider .fotorama,
-	#mainSlider .fotorama__stage {
+	.fotorama,
+	.fotorama__stage {
 		min-height: 200px;
 		.text{
 			width: 50% !important;
@@ -508,49 +498,21 @@
 		width: 295px;
 	}
 	#containerMain{
-		padding-bottom: 730px;
-		padding-top: 20px;
+		padding-bottom: 850px;
 	}
 	#footer{
-		height: 700px;
-		padding: 10px;
-
+		height: 750px;
 		.col{
-			font-size: 12px;
 			&:nth-child(2),
-			&:nth-child(3),
-			&:nth-child(4){
-				width: 150px;
-				@include box-sizing(border-box);
-				min-height: 0;
-
+			&:nth-child(3){
+				width: 160px;
 			}
 			&:nth-child(3){
-				padding-left: 5px;
+				padding-left: 10px;
 			}
 			&:nth-child(4){
 				padding: 0;
-				margin-bottom: 20px;
-				min-height: 220px;
-			}
-			.vidokCop{
-				white-space: nowrap;
-			}
-			.ttu{
-				position: absolute;
-				left: 160px;
-				top: -25px;
-				&.sec{
-					top: 0px;
-				}
-
-			}
-			ul{
-				position: relative;
-			}
-			#bx-composite-banner{
-				bottom: -220px;
-				left: -150px;
+				width: 100%;
 			}
 		}
 		.fCounter{
@@ -562,145 +524,6 @@
 		float: none !important;
 		padding: 0;
 		margin-top: 16px;
-		display: block;
-		i{
-			&:nth-child(1){
-				margin-left: 0;
-			}
-		}
-	}
-	.catalogCarusel{
-		display: none;
-	}
-	.catalogRows {
-		&.otziviRows {
-			[class*="row-"]{
-				width: 50%;
-				.inner{
-					padding: 0;
-				}
-				font-size: 12px;
-			}
-			.pic{
-				float: none;
-				width: 100%;
-				text-align: center;
-				height: 125px;
-				margin-bottom: 10px;
-				img{
-					height: 125px;
-				}
-			}
-		}
-		.pic{
-			width:70px;
-			float: left;
-			height: 80px;
-
-			img{
-				max-width: 100%;
-			}
-		}
-		.title{
-			margin-left: 85px;
-		}
-		ul{
-			clear: both;
-			margin-top: 10px;
-		}
-	}
-	.searchCat {
-		input[type="text"]{
-			font-size: 14px;
-		}
-	}
-	.categories {
-		[class*="row-"]{
-			.inner{
-				padding-top: 20px;
-				padding-bottom: 20px;
-				.title{
-					padding-top: 10px;
-					padding-bottom: 10px;
-				}
-				img{
-					right: 8px;
-				}
-			}
-		}
-	}
-
-	.servicePage{
-		.text{
-			clear: both;
-			margin-left: 0;
-		}
-		.serviceName{
-			float: right;
-			width: 200px;
-			display: block;
-			margin-bottom: 15px;
-			font-size: 16px;
-		}
-
-		.logo{
-			width: 80px;
-			margin-bottom: 15px;
-			img{
-				max-width: 100%;
-			}
-		}
-		.headingBold{
-			font-size: 14px;
-			span{
-				font-weight: 300;
-			}
-		}
-	}
-	.tabs.tovarTabs{
-		.bt{
-			width:145px;
-			display: inline-block;
-			vertical-align: top;
-			font-size: 14px;
-		}
-	}
-
-	.showMore{
-		span{
-			display: none !important;
-		}
-	}
-	.accordion.vacancii{
-		button{
-			height: 54px;
-			line-height: 1.3em;
-			padding-top: 5px;
-			font-size: 14px;
-		}
-	}
-
-	.vistavkaLine {
-		.arr{
-			top: 65px;
-		}
-		.row{
-			.pic{
-				@include imgWrapper(60px, 65px);
-			}
-		}
-	}
-	.newsRows{ 
-		.pic{
-			float: none;
-		}
-		.text{
-			margin-left: 0;
-			margin-top: 15px;
-		}
-	}
-	.fotorama__nav-wrap{
-		display: none;
 	}
 }
 

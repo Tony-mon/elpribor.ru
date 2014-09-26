@@ -2,7 +2,7 @@
 	
 	<form action="" class="searchCat">
 		<div class="inner">
-			<input type="text" placeholder="Введите типа прибора"><input type="submit" value="Подобрать" class="orange button">
+			<input type="text" placeholder="Введите типа прибора"><input type="submit" value="Подобрать" class="orange">
 		</div>				
 	</form>
 	<br>
