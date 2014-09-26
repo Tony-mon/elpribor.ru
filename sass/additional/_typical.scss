@@ -221,166 +221,167 @@ button,
 
 
 // ---------------------------------------------------------------- Radio Checkbox
+#pageHTML{
+	input[type='checkbox'],
+	input[type='radio']
+	{
+	    display: none;
+	}
+	input[type='checkbox'] + label,
+	input[type='radio'] + label
+	{
+	    position: relative;
 
-input[type='checkbox'],
-input[type='radio']
-{
-    display: none;
-}
-input[type='checkbox'] + label,
-input[type='radio'] + label
-{
-    position: relative;
+	    cursor: pointer;
+	    margin-bottom: 12px;
+	    display: block;
+	}
 
-    cursor: pointer;
-    margin-bottom: 12px;
-    display: block;
-}
+	input[type='radio'] + label
+	{
+	    line-height: 21px;
+	}
+	input[type='checkbox'] + label,
+	input[type='radio'] + label
+	{
+	    padding-left: 31px;
+	    &:before
+	    {
+	        position: absolute;
+	        top: 0;
+	        bottom: 0;
+	        left: 0;
 
-input[type='radio'] + label
-{
-    line-height: 21px;
-}
-input[type='checkbox'] + label,
-input[type='radio'] + label
-{
-    padding-left: 31px;
-    &:before
-    {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
+	        display: inline-block;
 
-        display: inline-block;
+	        width: 20px;
+	        height: 20px;
+	        margin: 0 5px 0 0;
+	        margin: auto;
 
-        width: 20px;
-        height: 20px;
-        margin: 0 5px 0 0;
-        margin: auto;
+	        content: '';
+	        vertical-align: middle;
 
-        content: '';
-        vertical-align: middle;
+	        border: 3px solid #86979f;
+	        background: transparent;
 
-        border: 3px solid #86979f;
-        background: transparent;
+	        @include box-sizing(border-box);
+	        @include transition(all, .3s);
+	    }
+	    &:after
+	    {
+	        position: absolute;
+	        top: 0;
+	        bottom: 0;
 
-        @include box-sizing(border-box);
-        @include transition(all, .3s);
-    }
-    &:after
-    {
-        position: absolute;
-        top: 0;
-        bottom: 0;
+	        display: block;
 
-        display: block;
+	        margin: auto 0;
 
-        margin: auto 0;
+	        content: '';
 
-        content: '';
+	        @include opacity(0);
+	        @include transition(all, .3s);
+	    }
+	}
+	input[type='checkbox'] + label,
+	input[type='radio'].asCheckbox + label
+	{
+	    &:before
+	    {
+	        top: 0;
 
-        @include opacity(0);
-        @include transition(all, .3s);
-    }
-}
-input[type='checkbox'] + label,
-input[type='radio'].asCheckbox + label
-{
-    &:before
-    {
-        top: 0;
+	        margin: auto;
 
-        margin: auto;
+	        background-position: -16px -79px;
 
-        background-position: -16px -79px;
+	        @include transition(all, .3s);
+	        @include border-radius(0);
+	    }
+	    &:after
+	    {
+	        z-index: 2;
+	        top: 0;
+	        left: 0;
 
-        @include transition(all, .3s);
-        @include border-radius(0);
-    }
-    &:after
-    {
-        z-index: 2;
-        top: 0;
-        left: 0;
+	        display: block;
 
-        display: block;
+	        width: 20px !important;
+	        height: 20px !important;
+	        background:transparent !important;
 
-        width: 20px !important;
-        height: 20px !important;
-        background:transparent !important;
+	        content: '';
 
-        content: '';
+	        border-right: 3px solid #fff;
+	        border-bottom: 3px solid #fff;
 
-        border-right: 3px solid #fff;
-        border-bottom: 3px solid #fff;
+	        @include box-sizing(border-box);
+	        @include transition(all, .3s);
+	        @include border-radius(0);
+	    }
+	}
+	input[type='radio'] + label
+	{
+	    &:before
+	    {
+	        @include border-radius(10px);
+	    }
+	    &:after
+	    {
+	        left: 10px;
 
-        @include box-sizing(border-box);
-        @include transition(all, .3s);
-        @include border-radius(0);
-    }
-}
-input[type='radio'] + label
-{
-    &:before
-    {
-        @include border-radius(10px);
-    }
-    &:after
-    {
-        left: 10px;
+	        width: 0;
+	        height: 0;
 
-        width: 0;
-        height: 0;
+	        background: #86979f;
 
-        background: #86979f;
+	        @include border-radius(4px);
+	    }
+	}
+	input[type='checkbox']:checked + label,
+	input[type='radio'].asCheckbox:checked + label
+	{
+	    &:before
+	    {
 
-        @include border-radius(4px);
-    }
-}
-input[type='checkbox']:checked + label,
-input[type='radio'].asCheckbox:checked + label
-{
-    &:before
-    {
+	        @include transition(all, .3s);
+	        border-color: #86979f;
+	    }
+	    &:after
+	    {
+	        top: -13px !important;
+	        left: 8px !important;
 
-        @include transition(all, .3s);
-        border-color: #86979f;
-    }
-    &:after
-    {
-        top: -13px !important;
-        left: 8px !important;
+	        width: 9px !important;
+			border-color: #69b106;
+	        @include opacity(1);
+	        @include rotate(401deg);
+	        @include transition(all, .3s);
+	        @include border-radius(0);
+	    }
+	}
+	input[type='radio']:checked + label
+	{
+	    &:before
+	    {
 
-        width: 9px !important;
-		border-color: #69b106;
-        @include opacity(1);
-        @include rotate(401deg);
-        @include transition(all, .3s);
-        @include border-radius(0);
-    }
-}
-input[type='radio']:checked + label
-{
-    &:before
-    {
+	        @include transition(all, .3s);
+	    }
+	    &:after
+	    {
+	        left: 6px;
 
-        @include transition(all, .3s);
-    }
-    &:after
-    {
-        left: 6px;
+	        width: 8px;
+	        height: 8px;
 
-        width: 8px;
-        height: 8px;
+	        background: #86979f;
+	        background: #69b106;
 
-        background: #86979f;
-        background: #69b106;
-
-        @include border-radius(4px);
-        @include opacity(1);
-        @include transition(all, .3s);
-    }
+	        @include border-radius(4px);
+	        @include opacity(1);
+	        @include transition(all, .3s);
+	    }
+	}
 }
 
 
@@ -677,7 +678,7 @@ article{
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			top: 0px;
+			top: 1px;
 			left:0px;
 			z-index: 10;
 			border:#fff 4px solid;

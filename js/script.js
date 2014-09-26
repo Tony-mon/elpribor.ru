@@ -4,6 +4,12 @@ $(function(){
 		$("#pageHTML").toggleClass("openMenu");
 	});
 	
+
+	$(".linkToBack").click(function(){
+		$("main").hide();
+		$("aside").show();
+	});
+
 	$('.tabs').each(function(){
 		var tabs=$(this),
 		btTabs=tabs.children('.btTabs'),
