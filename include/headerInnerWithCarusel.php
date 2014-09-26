@@ -616,5 +616,5 @@
 			</nav>
 		</aside>
 		<main role="main">
-			<a href="" class="linkToBack"><i class="fa fa-chevron-left"></i></a>
+			<span class="linkToBack"><i class="fa fa-chevron-left"></i></span>
 			<h1 class="blockTitle pageTitle">Заголовок страницы</h1>

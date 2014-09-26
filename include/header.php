@@ -191,7 +191,7 @@
 			</form>
 			
 			<div class="row-1-4">
-				<a href="" class="buttonDounload"></a>
+				<a href="" class="buttonDounload">Скачать каталог</a>
 			</div>
 
 			<div class="clear"></div>

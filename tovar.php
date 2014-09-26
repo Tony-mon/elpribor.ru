@@ -24,7 +24,7 @@
 	</article>
 	<br>
 	<br>
-	<div class="tabs servicePage">
+	<div class="tabs servicePage tovarTabs">
 		<div class="btTabs">
 			<div class="bt active">
 				Технические<br>

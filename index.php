@@ -18,6 +18,10 @@
 		<li><a href="vacancies.php">Вакансии</a></li>
 		<li><a href="video.php">Видеоинструкции</a></li>
 		<li><a href="vistavki.php">Выставки</a></li>
+		<li><a href="newsList.php">Список новостей</a></li>
+		<li><a href="search.php">Результаты поиска</a></li>
+			<br>------------------------------------ 	<br>	
+		<li><a href="404.php">404</a></li>
 	</ul>
 
 <?include 'include/footer.php';?>
